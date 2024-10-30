@@ -93,6 +93,9 @@ p{
     min-width: 250px;/*images should have min width of 250 px*/
     margin-bottom: 30px;
 }
+.panier{width: 30px;}
+.panier:hover{background-color: red;
+border-radius: 22%;}
 .col-3 img{
     width: 100%;/*utilize full col-3 width which has min-width of 250 px*/
 }
@@ -140,6 +143,10 @@ p{
 h4{
     color: #555;
     font-weight: normal;
+}
+
+.col-3:hover{
+    transform: translateY(-5px);/*hover effect to col-4 which contain 4 images of featured products and image move in y direction when hover*/ 
 }
 /*for products price*/
 .col-4 p{    
@@ -519,6 +526,21 @@ form a{
     transform: translateX(100px);
     transition: transform 1s;
 }
+.bar_column {width: 100px;
+    height: 100px;
+    background-color: #58f6de;
+    display: none;
+   
+
+}
+.bar-color{
+    width: 100%;
+    height: 100px;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 
 

@@ -166,7 +166,7 @@
   
   /*---- media queary min--0px & max--599px ----*/
   
-  @media (min-width: 0px) and (max-width:599px) {
+  @media (min-width: 0px) and (max-width:804px) {
     
     
     header{
