@@ -317,6 +317,7 @@ ul{
         cursor: pointer; 
     }
 
+
 }
 /*All prodcuts page*/
 .row-2{
@@ -526,17 +527,21 @@ form a{
     transform: translateX(100px);
     transition: transform 1s;
 }
-.bar_column {width: 100px;
-    height: 100px;
-    background-color: #58f6de;
+.bar_column {
+    width: 200px;
+    height: 100vh;
+    background-color: black;
     display: none;
+    z-index: 10;
+    color: white;
+    padding: 10px;
+    
    
 
 }
 .bar-color{
     width: 100%;
     height: 100px;
-    
     display: flex;
     justify-content: flex-end;
 }
@@ -579,4 +584,48 @@ form a{
         display:none;/*hide product name in smaller screen*/
     }
 
+    /* display none fo var v */
+    
+
+}
+
+/* Default styles for desktop */
+#nav .menu-bar-side, #nav .menu-bar {
+    display: flex;
+}
+.bar-color {
+    display: none; /* Hide the mobile menu by default */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    #nav .menu-bar-side, #nav .menu-bar {
+        display: none; /* Hide desktop nav */
+    }
+    #show_bar {
+        display: block; /* Show the hamburger icon */
+    }
+    .bar-color {
+        display: block; /* Show the mobile menu when toggled */
+    }
+    .bar_column {
+        display: flex;
+        flex-direction: column;
+        background-color: #333; /* Mobile menu background */
+        position: absolute;
+        top: 80px; /* Adjust as per your header height */
+        width: 100%;
+    }
+    .bar_column ul {
+        list-style: none;
+        padding: 0;
+    }
+    .bar_column ul li {
+        padding: 10px;
+        text-align: center;
+    }
+    .bar_column ul li a {
+        color: white;
+        text-decoration: none;
+    }
 }

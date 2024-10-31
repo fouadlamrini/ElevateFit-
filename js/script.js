@@ -20,14 +20,65 @@
 // SmallImg[3].onclick = function () {
 //     ProductImg.src = SmallImg[3].src;
 // }
-let show_bar = document.getElementById("btn-nav");
-show_bar.addEventListener("click",  display_non);
+
+let show_bar = document.getElementById("show_bar");
+show_bar.addEventListener("click", display_non);
+
 function display_non() {
+    
     let bar_column = document.getElementById("bar_column");
     if (bar_column.style.display == "none") { bar_column.style.display = "block"; }
     else { bar_column.style.display = "none"; }
+   
     
 
 }
+
+
+
+
+const priceRange = document.querySelector("#priceRange");
+
+
+const products = document.querySelectorAll(".product");
+
+
+priceRange.addEventListener("input", function() {
+    
+    const maxPrice = parseInt(priceRange.value);
+
+    
+    products.forEach(function(product) {
+        
+        const productPrice = parseInt(product.getAttribute("data-price"));
+
+       
+        if (productPrice <= maxPrice) {
+            
+            product.style.display = "block";
+        } else {
+           
+            product.style.display = "none";
+        }
+    });
+});
+
+
+const filterSelect = document.getElementById("product-filter");
+
+
+filterSelect.addEventListener("change", function() {
+    const selectedCategory = filterSelect.value;
+
+    
+    document.querySelectorAll(" .product").forEach(product => {
+        if (selectedCategory === "all" || product.getAttribute("data-category") === selectedCategory) {
+            product.style.display = "block"; 
+        } else {
+            product.style.display = "none"; 
+        }
+    });
+});
+
 
 
