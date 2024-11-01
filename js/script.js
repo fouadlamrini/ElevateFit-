@@ -37,54 +37,5 @@ function display_non() {
 
 
 
-const priceRange = document.querySelector("#priceRange");
-
-
-const products = document.querySelectorAll(".product");
-
-
-priceRange.addEventListener("input", function() {
-    
-    const maxPrice = parseInt(priceRange.value);
-
-    
-    products.forEach(function(product) {
-        
-        const productPrice = parseInt(product.getAttribute("data-price"));
-
-       
-        if (productPrice <= maxPrice) {
-            
-            product.style.display = "block";
-        } else {
-           
-            product.style.display = "none";
-        }
-    });
-});
-
-
-const filterSelect = document.getElementById("product-filter");
-
-
-filterSelect.addEventListener("change", function() {
-    const selectedCategory = filterSelect.value;
-
-    
-    document.querySelectorAll(" .product").forEach(product => {
-        if (selectedCategory === "all" || product.getAttribute("data-category") === selectedCategory) {
-            product.style.display = "block"; 
-        } else {
-            product.style.display = "none"; 
-        }
-    });
-});
-
-const panier=document.querySelectorAll(.panier);
-panier.addEventListener("click",function (){
-
-
-
-})
 
 
