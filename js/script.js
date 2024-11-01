@@ -22,7 +22,7 @@
 // }
 
 let show_bar = document.getElementById("show_bar");
-show_bar.addEventListener("click", display_non);
+show_bar.ad dEventListener("click", display_non);
 
 function display_non() {
     
@@ -80,5 +80,11 @@ filterSelect.addEventListener("change", function() {
     });
 });
 
+const panier=document.querySelectorAll(.panier);
+panier.addEventListener("click",function (){
+
+
+
+})
 
 
