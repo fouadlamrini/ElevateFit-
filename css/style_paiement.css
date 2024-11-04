@@ -1,0 +1,118 @@
+.form {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    background-color: rgb(196, 189, 189);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.form1 {
+    display: flex;
+}
+
+.star {
+    color: red;
+}
+
+.case {
+    height: 30px;
+    width: 60%;
+}
+
+.case1 {
+    position: relative;
+    left: 12%;
+}
+
+.case2 {
+    position: relative;
+    left: 12%;
+}
+
+.case3 {
+    position: relative;
+    left: 5%;
+}
+
+.case4 {
+    position: relative;
+    left: 18%;
+}
+
+.case5 {
+    position: relative;
+    left: 5%;
+}
+
+.case6 {
+    position: relative;
+    left: 40%;
+}
+
+.case7 {
+    position: relative;
+    left: 15%;
+}
+
+.case8 {
+    position: relative;
+    left: 5%;
+}
+
+.case9 {
+    position: relative;
+    left: 5%;
+}
+
+.case10 {
+    position: relative;
+    left: 20%;
+}
+
+.case11 {
+    position: relative;
+    left: 5%;
+}
+
+.radio {
+    display: flex;
+}
+
+.paiement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid black;
+    height: 100%;
+    margin-top: 10%
+}
+
+.Your {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 10px;
+    padding: 5px;
+    background-color: orangered;
+    color: white;
+}
+
+.Place {
+    width: 95%;
+    position: relative;
+    left: 3%;
+    padding: 5px;
+    border-radius: 30%;
+    background-color: rgb(37, 99, 193);
+    color: white;
+}

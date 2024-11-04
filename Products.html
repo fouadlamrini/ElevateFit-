@@ -39,8 +39,8 @@
 
             <ul class="menu-bar">
 
-                <li>&#36;0.00</li>
-                <li><i class='fas fa-shopping-cart'></i></li>
+               <li id="cart-total">&#36;0.00</li>
+                <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
 
             </ul>
             <div id="show_bar" >
@@ -98,7 +98,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$63.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="63"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="72" data-category="shoes">
@@ -112,7 +112,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$72.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="72"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product"  data-price="50" data-category="trousers">
@@ -126,7 +126,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="50"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="99" data-category="t_shirt">
@@ -141,7 +141,7 @@
 
                 </div>
                 <p>$99.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="99"><i class='fas fa-shopping-cart'></i></button>
             </div>
         </div>
 
@@ -160,7 +160,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$84.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="84"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="75" data-category="t_shirt">
@@ -174,7 +174,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$75.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="75"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="79" data-category="socks">
@@ -188,7 +188,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$79.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="79"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="64" data-category="watch">
@@ -203,7 +203,7 @@
 
                 </div>
                 <p>$64.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="64"><i class='fas fa-shopping-cart'></i></button>
             </div>
         </div>
         <div class="row">
@@ -218,7 +218,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$81.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="81"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="57" data-category="shoes">
@@ -232,7 +232,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$57.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="57"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="53" data-category="shoes">
@@ -246,7 +246,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$53.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="53"><i class='fas fa-shopping-cart'></i></button>
             </div>
 
             <div class="col-4 product" data-price="21" data-category="trousers">
@@ -261,7 +261,7 @@
 
                 </div>
                 <p>$21.00</p>
-                <button class="panier"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="21"><i class='fas fa-shopping-cart'></i></button>
             </div>
         </div>
 
@@ -330,7 +330,7 @@
 
     <!-----------------JS----------------------->
     <script src="js/script.js" ></script>
-
+    <script src="js/shop.js" ></script>
 </body>
 
 </html>

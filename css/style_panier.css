@@ -41,3 +41,7 @@ align-items: flex-end;
 width: 52%;
 position: relative;
 left: 48%;}
+.buy{padding: 5px;
+    width: 10%;
+}
+.buy:hover{background-color: orangered;}
