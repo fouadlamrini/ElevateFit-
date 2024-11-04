@@ -116,3 +116,83 @@ form {
     background-color: rgb(37, 99, 193);
     color: white;
 }
+
+@media screen and (max-width:980px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 10%;
+        width: 80%;
+    
+        background-color: rgb(196, 189, 189);
+    }
+    .case {
+        height: 30px;
+        width: 30%;
+    }
+    
+
+    .case1 {
+        position: relative;
+        left: 12%;
+    }
+    
+    .case2 {
+        position: relative;
+        left: 12%;
+    }
+    
+    .case3 {
+        position: relative;
+        left: 9%;
+    }
+    
+    .case4 {
+        position: relative;
+        left: 14%;
+    }
+    
+    .case5 {
+        position: relative;
+        left: 10%;
+    }
+    
+    .case6 {
+        position: relative;
+        left: 24%;
+    }
+    
+    .case7 {
+        position: relative;
+        left: 15%;
+    }
+    
+    .case8 {
+        position: relative;
+        left: 9%;
+    }
+    
+    .case9 {
+        position: relative;
+        left: 9%;
+    }
+    
+    .case10 {
+        position: relative;
+        left: 17%;
+    }
+    
+    .case11 {
+        position: relative;
+        left: 7%;
+    }
+    .envoyer{width: 15%;}
+    form {
+        display: flex;
+        flex-direction: column;
+    position: relative;
+    left: 10%;
+    
+    }
+}
