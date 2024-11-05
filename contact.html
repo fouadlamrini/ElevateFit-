@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>elevateFit</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/detail.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
@@ -16,15 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!---- icon cdn link---->
     <link rel="stylesheet" href="css/style_panier.css">
-
-
+    <link rel="stylesheet" href="css/style_contact.css">
 </head>
 
 <body>
-
-
-
-    <!--making header-->
     <header>
 
         <nav id="nav">
@@ -44,12 +39,12 @@
                 <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
 
             </ul>
-            <div id="show_bar" >
+            <div id="show_bar">
                 <i class="fa fa-bars " id="btn-nav"></i>
             </div>
         </nav>
         <div class="bar-color">
-            <div class="bar_column"  id="bar_column" style="display: none;">
+            <div class="bar_column" id="bar_column" style="display: none;">
                 <ul class="menu-bar-side menu-bar">
                     <li><a href="index.html" style=" all: unset;">Home</a></li>
                     <li><a href="Products.html" style=" all: unset;">Shope</a></li>
@@ -60,44 +55,41 @@
         </div>
 
 
-        
-        
+
+
 
     </header>
+    <section class="contact">
+        <h1>Contact nous</h1>
+        <form>
 
-    <section>
-        <div class="top_bar">
-            <p>Product</p>
-            <p>Quantite</p>
-            <p>Subtotal</p>
-
-        </div>
-        <div class="card_shop">
-            
-        <div class="product">
-            <img src="images/buy-1.jpg" alt="">
-            <div class="detail_product">
-                <h4>Red Printed T-shirt</h4>
-                <p>price $21.00</p>
-                <p class="Remove">Remove</p>
+            <div class="group">
+                <p>Nom</p>
+                <input class="g1" type="text" required>
             </div>
-            <div class="prix_contitu">
-                <input type="number" class="number">
-                <p> $21.00</p>
+            <div class="group">
+                <p>Prenom</p>
+                <input class="g1" type="text" required>
             </div>
-
-        </div>
-           
-            <div class="prix_total">
-                <p>Subtotal  $21.00</p>
-                <p>Tax  $30.00</p>
-                <p>Total  $51.00</p>
-                
-            
-        </div>
-        <a href="paiement.html"><button class="buy">buy now</button></a>
-    </div>
+            <div class="group">
+                <p>Email</p>
+                <input class="g1" type="email" required>
+            </div>
+            <input class="button" type="submit" value="Envoyer">
+        </form>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <footer>
@@ -154,8 +146,6 @@
         </div>
 
     </footer>
-
-    <!-----------------JS----------------------->
     <script src="js/script.js"></script>
 </body>
 
