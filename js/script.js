@@ -35,7 +35,7 @@ function display_non() {
 }
 
 
-
+//filtre par price
 
 const priceRange = document.querySelector("#priceRange");
 
@@ -64,6 +64,7 @@ priceRange.addEventListener("input", function() {
 });
 
 
+//filtre par category
 const filterSelect = document.getElementById("product-filter");
 
 
