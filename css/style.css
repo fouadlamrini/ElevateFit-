@@ -360,20 +360,17 @@ hr {
 /* Responsive Design */
 @media (max-width: 992px) {
     .col-4 {
-        flex: 0 0 calc(33.33% - 15px); /* Réduction de l'espace pour éviter les débordements */
+        flex: 0 0 calc(33.33% - 15px);
         max-width: calc(33.33% - 15px);
     }
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-        justify-content: space-between; /* Ajustement pour éviter les chevauchements */
-    }
+   
 
     .menu-bar-side, .menu-bar {
         display: block;
-        text-align: center; /* Centrer les éléments */
+        text-align: center; 
     }
     
     #show_bar {
@@ -381,12 +378,12 @@ hr {
     }
     
     .menu-bar {
-        justify-content: center; /* Centrer les éléments */
-        width: 100%; /* Prend toute la largeur */
+        justify-content: center; 
+        width: 100%;
     }
     
     .col-4 {
-        flex: 0 0 calc(50% - 15px); /* Réduction de l'espace pour éviter les débordements */
+        flex: 0 0 calc(50% - 15px); 
         max-width: calc(50% - 15px);
     }
     
@@ -397,7 +394,7 @@ hr {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .col-4 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -406,7 +403,7 @@ hr {
     .filter-section {
         flex-direction: column;
         align-items: stretch;
-        gap: 10px; /* Ajout d'un espace entre les éléments */
+        gap: 10px; 
     }
     
     #searchInput, select {
@@ -416,104 +413,20 @@ hr {
     nav ul {
         padding: 0;
         margin: 0;
-        text-align: center; /* Centrer les liens */
+        text-align: center; 
     }
 
     .menu-bar-side li, .menu-bar li {
-        margin: 10px 0; /* Ajout d'espace vertical entre les éléments */
+        margin: 10px 0; 
     }
 }
 
-/* Écrans très larges (≥1200px) */
-@media (max-width: 1200px) {
-    .col-4 {
-        flex: 0 0 calc(25% - 15px);
-        max-width: calc(25% - 15px);
-    }
-}
 
-/* Écrans larges (≥992px) */
-@media (max-width: 992px) {
-    .col-4 {
-        flex: 0 0 calc(33.33% - 15px); /* Réduction de l'espace pour éviter les débordements */
-        max-width: calc(33.33% - 15px);
-    }
-}
 
-/* Écrans moyens (≥768px) */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .menu-bar-side, .menu-bar {
-        display: block;
-        text-align: center;
-    }
 
-    #show_bar {
-        display: block;
-    }
 
-    .menu-bar {
-        justify-content: center;
-        width: 100%;
-    }
 
-    .col-4 {
-        flex: 0 0 calc(50% - 15px);
-        max-width: calc(50% - 15px);
-    }
 
-    .panier {
-        opacity: 1;
-        visibility: visible;
-        bottom: 15px;
-    }
-}
 
-/* Écrans petits (≥576px) */
-@media (max-width: 576px) {
-    .col-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
 
-    .filter-section {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    #searchInput, select {
-        width: 100%;
-    }
-
-    nav ul {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-
-    .menu-bar-side li, .menu-bar li {
-        margin: 10px 0;
-    }
-}
-
-/* Écrans très petits (<400px) */
-@media (max-width: 400px) {
-    .menu-bar, .menu-bar-side {
-        font-size: 14px;
-    }
-
-    .panier {
-        bottom: 10px;
-        right: 10px;
-        width: 90%;
-    }
-
-    nav {
-        padding: 5px;
-    }
-}
