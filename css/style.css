@@ -155,22 +155,53 @@ select {
 /* Product Grid */
 .row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -15px;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Ajoute un espacement uniforme entre les cartes */
+    margin: 0 -15px; /* Ajuste les marges pour éviter les débordements */
 }
 
-.row-2 {
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+/* Cartes produit pour différentes tailles d'écran */
+
+/* Grands écrans (≥992px) */
+@media (min-width: 992px) {
+    .col-4 {
+        flex: 0 0 calc(25% - 30px); /* 4 cartes par ligne */
+        max-width: calc(25% - 30px);
+        margin: 15px;
+    }
 }
 
-.col-4 {
-    flex: 0 0 calc(25% - 30px);
-    max-width: calc(25% - 30px);
-    margin: 15px;
-    position: relative;
+/* Écrans moyens (768px à 991px) */
+@media (max-width: 991px) {
+    .col-4 {
+        flex: 0 0 calc(33.33% - 30px); /* 3 cartes par ligne */
+        max-width: calc(33.33% - 30px);
+        margin: 15px;
+    }
+}
+
+/* Petits écrans (≤768px) */
+@media (max-width: 768px) {
+    .col-4 {
+        flex: 0 0 calc(50% - 30px); /* 2 cartes par ligne */
+        max-width: calc(50% - 30px);
+        margin: 15px;
+    }
+}
+
+/* Très petits écrans (≤480px) */
+@media (max-width: 480px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+        justify-content: center; /* Centre les cartes */
+    }
+
+    .col-4 {
+        flex: 0 0 100%; /* Une carte par ligne */
+        max-width: 100%; /* La carte occupe toute la largeur */
+        margin: 15px 0; /* Ajoute un espacement vertical entre les cartes */
+    }
 }
 
 /* Product Card */
@@ -366,8 +397,6 @@ hr {
 }
 
 @media (max-width: 768px) {
-   
-
     .menu-bar-side, .menu-bar {
         display: block;
         text-align: center; 
@@ -418,6 +447,18 @@ hr {
 
     .menu-bar-side li, .menu-bar li {
         margin: 10px 0; 
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+        justify-content: center; /* Centre les cartes */
+    }
+
+    .col-4 {
+        flex: 0 0 100%; /* Une carte par ligne */
+        max-width: 100%; /* La carte occupe toute la largeur */
+        margin: 15px 0; /* Ajoute un espacement vertical entre les cartes */
     }
 }
 
