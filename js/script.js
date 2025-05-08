@@ -40,6 +40,7 @@ function display_non() {
 //filtre par price et category
 
 const priceRange = document.querySelector("#priceRange");
+const priceValue = document.querySelector("#priceValue"); // Sélectionnez l'élément où afficher la valeur
 const filterSelect = document.getElementById("product-filter");
 const products = document.querySelectorAll(".product");
 
@@ -61,8 +62,13 @@ function applyFilters() {
     });
 }
 
-// Écouteurs d'événements pour les deux filtres
-priceRange.addEventListener("input", applyFilters);
+// Mettre à jour dynamiquement la valeur du prix affiché
+priceRange.addEventListener("input", function () {
+    priceValue.textContent = priceRange.value; // Met à jour le texte du span
+    applyFilters(); // Applique les filtres après la mise à jour
+});
+
+// Écouteur pour le filtre de catégorie
 filterSelect.addEventListener("change", applyFilters);
 
 
