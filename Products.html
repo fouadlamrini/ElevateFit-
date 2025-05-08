@@ -36,14 +36,10 @@
                 <li><a href="Products.html" style=" all: unset;">Shope</a></li>
                 <li><a href="about.html" style=" all: unset;">about</a></li>
                 <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-            </ul>
-
-            <ul class="menu-bar">
-
-               <li id="cart-total">&#36;0.00</li>
+                <li id="cart-total">&#36;0.00</li>
                 <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
-
             </ul>
+
             <div id="show_bar" >
                 <i class="fa fa-bars " id="btn-nav"></i>
             </div>
@@ -68,23 +64,22 @@
 
     <div class="small container">
 
-
-        <div class="row row-2">
-            <h2>All Products
-
-            </h2>
-            <select  id="product-filter">
-                <option value="all">all</option>
-                <option value="t_shirt">sort by t-shirt</option>
-                <option value="trousers">Sort trousers</option>
-                <option value="shoes">Sort shoes</option>
-                <option value="watch">Sort by watch </option>
-                <option value="stocks">Sort by stocks</option>
+        <div class="filter-section">
+            <input type="text" id="searchInput" placeholder="Search products..." style="padding: 8px; margin-right: 20px;">
+            <select id="product-filter">
+                <option value="all">All Categories</option>
+                <option value="t_shirt">T-Shirts</option>
+                <option value="trousers">Trousers</option>
+                <option value="shoes">Shoes</option>
+                <option value="watch">Watches</option>
+                <option value="socks">Socks</option>
             </select>
+            <label for="priceRange">Max Price: $<span id="priceValue">300</span></label>
+            <input type="range" id="priceRange" min="0" max="300" value="300">
         </div>
 
-        <label for="priceRange">Filter by Price:</label>
-        <input type="range" id="priceRange" min="0" max="300" value="300">
+
+      
         <div class="row">
 
 
@@ -99,7 +94,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$63.00</p>
-                <button class="panier" data-price="63"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="63"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="72" data-category="shoes">
@@ -113,7 +108,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$72.00</p>
-                <button class="panier" data-price="72"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="72"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product"  data-price="50" data-category="trousers">
@@ -127,7 +122,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button class="panier" data-price="50"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="50"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="99" data-category="t_shirt">
@@ -142,7 +137,7 @@
 
                 </div>
                 <p>$99.00</p>
-                <button class="panier" data-price="99"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="99"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
         </div>
 
@@ -161,7 +156,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$84.00</p>
-                <button class="panier" data-price="84"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="84"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="75" data-category="t_shirt">
@@ -175,7 +170,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$75.00</p>
-                <button class="panier" data-price="75"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="75"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="79" data-category="socks">
@@ -189,7 +184,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$79.00</p>
-                <button class="panier" data-price="79"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="79"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="64" data-category="watch">
@@ -204,7 +199,7 @@
 
                 </div>
                 <p>$64.00</p>
-                <button class="panier" data-price="64"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="64"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
         </div>
         <div class="row">
@@ -219,7 +214,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$81.00</p>
-                <button class="panier" data-price="81"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="81"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="57" data-category="shoes">
@@ -233,7 +228,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$57.00</p>
-                <button class="panier" data-price="57"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="57"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="53" data-category="shoes">
@@ -247,7 +242,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$53.00</p>
-                <button class="panier" data-price="53"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="53"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
             <div class="col-4 product" data-price="21" data-category="trousers">
@@ -262,7 +257,7 @@
 
                 </div>
                 <p>$21.00</p>
-                <button class="panier" data-price="21"><i class='fas fa-shopping-cart'></i></button>
+                <button class="panier" data-price="21"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
         </div>
 
@@ -332,6 +327,19 @@
     <!-----------------JS----------------------->
     <script src="js/script.js" ></script>
     <script src="js/shop.js" ></script>
+    <script src="js/products.js" ></script>
+    <!-- Add this after the title section -->
+    <select id="categorySelect">
+        <option value="all">All Categories</option>
+        <option value="t_shirt">T-Shirts</option>
+        <option value="shoes">Shoes</option>
+        <option value="pants">Pants</option>
+    </select>
+    
+    <div class="price-filter">
+        <label for="priceRange">Max Price: $<span id="priceValue">100</span></label>
+        <input type="range" id="priceRange" min="0" max="100" value="100">
+    </div>
 </body>
 
 </html>

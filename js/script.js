@@ -21,6 +21,8 @@
 //     ProductImg.src = SmallImg[3].src;
 // }
 
+
+
 let show_bar = document.getElementById("show_bar");
 show_bar.addEventListener("click", display_non);
 
@@ -35,51 +37,33 @@ function display_non() {
 }
 
 
-//filtre par price
+//filtre par price et category
 
 const priceRange = document.querySelector("#priceRange");
-
-
+const filterSelect = document.getElementById("product-filter");
 const products = document.querySelectorAll(".product");
 
-
-priceRange.addEventListener("input", function() {
-    
+// Fonction pour appliquer les deux filtres
+function applyFilters() {
     const maxPrice = parseInt(priceRange.value);
+    const selectedCategory = filterSelect.value;
 
-    
     products.forEach(function(product) {
-        
         const productPrice = parseInt(product.getAttribute("data-price"));
+        const productCategory = product.getAttribute("data-category");
 
-       
-        if (productPrice <= maxPrice) {
-            
+        // Vérifier si le produit correspond aux deux filtres
+        if ((selectedCategory === "all" || productCategory === selectedCategory) && productPrice <= maxPrice) {
             product.style.display = "block";
         } else {
-           
             product.style.display = "none";
         }
     });
-});
+}
 
-
-//filtre par category
-const filterSelect = document.getElementById("product-filter");
-
-
-filterSelect.addEventListener("change", function() {
-    const selectedCategory = filterSelect.value;
-
-    
-    document.querySelectorAll(" .product").forEach(product => {
-        if (selectedCategory === "all" || product.getAttribute("data-category") === selectedCategory) {
-            product.style.display = "block"; 
-        } else {
-            product.style.display = "none"; 
-        }
-    });
-});
+// Écouteurs d'événements pour les deux filtres
+priceRange.addEventListener("input", applyFilters);
+filterSelect.addEventListener("change", applyFilters);
 
 
 

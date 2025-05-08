@@ -1,0 +1,82 @@
+Contexte du projet
+​
+
+**Objectif : **Nous recherchons un développeur Front-end compétent pour rendre le site ElevateFit réactif en ajoutant des breakpoints et en intégrant des composants interactifs pour améliorer l'engagement des utilisateurs.
+
+​
+
+User Stories :
+
+​
+
+1.Page de Produits
+
+​
+
+En tant qu'utilisateur, je veux pouvoir voir une liste de vêtements, avec la possibilité de filtrer par catégorie pour trouver les articles qui m'intéressent.
+En tant qu'utilisateur, je souhaite pouvoir filtrer les vêtements par plage de prix afin de voir seulement les articles dans mon budget .
+En tant qu'utilisateur, je souhaite que le bouton "Ajouter au panier" ait un effet "hover" pour confirmer visuellement mon action .
+​
+
+2. Page de Détail Produit
+
+​
+
+En tant qu'utilisateur, je veux pouvoir cliquer sur un vêtement pour voir ses détails, comme le prix, la description, les images et les avis clients, afin d'obtenir plus d'informations avant de décider d'acheter.
+​
+
+3. Page de Panier
+
+​
+
+En tant qu'utilisateur, je souhaite ajouter des articles au panier pour revoir et confirmer ma sélection avant de passer à l'achat.
+En tant qu'utilisateur, je veux pouvoir voir le total des prix des articles ajoutés dans mon panier, mettre à jour les quantités ou supprimer des articles si nécessaire.
+​
+
+4. Page de Paiement (Checkout)
+
+​
+
+En tant qu'utilisateur, je souhaite une page de paiement où je peux remplir mes informations pour finaliser mon achat.
+En tant qu'utilisateur, je souhaite que tous les champs requis soient validés pour éviter les erreurs, afin de m'assurer que les informations sont complètes avant de soumettre la commande.
+​
+
+5. Navbar Responsive
+
+​
+
+En tant qu'utilisateur, je souhaite que la barre de navigation s'adapte aux petits écrans pour naviguer facilement sur mobile.
+​
+
+Bonus :
+
+​
+
+6. Page Wishlist
+
+​
+
+En tant qu'utilisateur, je souhaite enregistrer mes vêtements favoris dans une liste de souhaits pour les retrouver facilement plus tard.
+​
+
+7. Pages de Connexion et Inscription & profeil
+
+​
+
+En tant qu'utilisateur, je veux pouvoir m'inscrire et créer un compte pour gérer mes commandes et mon profil.
+En tant qu'utilisateur enregistré, je souhaite me connecter pour accéder à mes informations personnelles et à mon historique d'achats.
+​
+
+Recommandations :
+
+​
+
+Utilisez des unités de mesure relatives comme les pourcentages et les unités em plutôt que des valeurs fixes en pixels pour dimensionner les éléments, ce qui facilite l'adaptabilité.
+Évitez la manipulation directe du DOM lorsque cela n'est pas nécessaire. Privilégiez la modification des classes, des attributs ou du contenu plutôt que de créer des éléments à partir de zéro.
+Utilisez les outils de développement du navigateur pour inspecter et déboguer le DOM et le CSS en temps réel. Implémentez des images adaptatives en utilisant la balise
+Compressez les images pour réduire la taille des fichiers tout en maintenant une qualité visuelle élevée.
+Assurez-vous que le site est conforme aux normes d'accessibilité WCAG (Web Content Accessibility Guidelines) pour garantir une expérience inclusive pour tous les utilisateurs, y compris ceux ayant des besoins spéciaux.
+Utilisez des outils d'audit d'accessibilité tels que Axe ou Lighthouse pour identifier et corriger les problèmes d'accessibilité.
+Testez le site sur divers appareils et résolutions pour vous assurer qu'il s'adapte correctement.
+Assurez-vous que le site est compatible avec les dernières normes web.
+Mettez en place une structure de code modulaire et bien documentée pour faciliter la maintenance future.
