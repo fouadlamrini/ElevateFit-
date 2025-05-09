@@ -1,5 +1,3 @@
-
-
 let show_bar = document.getElementById("show_bar");
 show_bar.addEventListener("click", display_non);
 
@@ -12,6 +10,13 @@ function display_non() {
     
 
 }
+
+window.addEventListener("resize", function () {
+    let bar_column = document.getElementById("bar_column");
+    if (window.innerWidth > 768) {
+        bar_column.style.display = "none"; // Cache le menu pour les grands écrans
+    }
+});
 
 
 //filtre par price et category
