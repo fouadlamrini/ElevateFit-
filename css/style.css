@@ -1,3 +1,7 @@
+/* Toujours centrer les produits filtrés dans la grille */
+.row {
+    justify-content: center;
+}
 /* Base Styles */
 * {
     margin: 0;
@@ -36,7 +40,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Empêche les éléments de se superposer */
+    flex-wrap: wrap; /* Empêche les éléments de se superposer */
     padding: 0 20px; /* Ajoute un peu d'espace autour */
 }
 
@@ -156,7 +160,7 @@ select {
 .row {
     display: flex;
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
-    justify-content: space-between; /* Ajoute un espacement uniforme entre les cartes */
+    justify-content: center; /* Centre les cartes même après filtrage */
     margin: 0 -15px; /* Ajuste les marges pour éviter les débordements */
 }
 
@@ -268,13 +272,13 @@ select {
     align-items: center;
     gap: 8px;
     opacity: 0;
-    visibility: hidden;
+    display: none;
     box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
 }
 
 .product:hover .panier {
     opacity: 1;
-    visibility: visible;
+    display: block;
     bottom: 20px;
 }
 
