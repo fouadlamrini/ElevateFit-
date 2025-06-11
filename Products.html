@@ -83,7 +83,7 @@
         <div class="row">
 
 
-            <div class="col-4 product" data-price="63" data-category="t_shirt">
+            <div class="col-4 product" data-id="1" data-price="63" data-category="t_shirt">
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -97,7 +97,7 @@
                 <button class="panier" data-price="63"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="72" data-category="shoes">
+            <div class="col-4 product" data-id="2" data-price="72" data-category="shoes">
                 <img src="Images/product-2.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -111,7 +111,7 @@
                 <button class="panier" data-price="72"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product"  data-price="50" data-category="trousers">
+            <div class="col-4 product" data-id="3" data-price="50" data-category="trousers">
                 <img src="Images/product-3.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -125,7 +125,7 @@
                 <button class="panier" data-price="50"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="99" data-category="t_shirt">
+            <div class="col-4 product" data-id="4" data-price="99" data-category="t_shirt">
                 <img src="Images/product-4.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -145,7 +145,7 @@
 
         <div class="row">
 
-            <div class="col-4 product" data-price="84" data-category="shoes">
+            <div class="col-4 product" data-id="5" data-price="84" data-category="shoes">
                 <img src="Images/product-5.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -159,7 +159,7 @@
                 <button class="panier" data-price="84"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="75" data-category="t_shirt">
+            <div class="col-4 product" data-id="6" data-price="75" data-category="t_shirt">
                 <img src="Images/product-6.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -173,7 +173,7 @@
                 <button class="panier" data-price="75"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="79" data-category="socks">
+            <div class="col-4 product" data-id="7" data-price="79" data-category="socks">
                 <img src="Images/product-7.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -187,7 +187,7 @@
                 <button class="panier" data-price="79"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="64" data-category="watch">
+            <div class="col-4 product" data-id="8" data-price="64" data-category="watch">
                 <img src="Images/product-8.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -203,7 +203,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4 product" data-price="81" data-category="watch">
+            <div class="col-4 product" data-id="9" data-price="81" data-category="watch">
                 <img src="Images/product-9.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -217,7 +217,7 @@
                 <button class="panier" data-price="81"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="57" data-category="shoes">
+            <div class="col-4 product" data-id="10" data-price="57" data-category="shoes">
                 <img src="Images/product-10.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -231,7 +231,7 @@
                 <button class="panier" data-price="57"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="53" data-category="shoes">
+            <div class="col-4 product" data-id="11" data-price="53" data-category="shoes">
                 <img src="Images/product-11.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -245,7 +245,7 @@
                 <button class="panier" data-price="53"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
             </div>
 
-            <div class="col-4 product" data-price="21" data-category="trousers">
+            <div class="col-4 product" data-id="12" data-price="21" data-category="trousers">
                 <img src="Images/product-12.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -342,6 +342,17 @@
     </div>
 
      <script src="js/products.js" ></script>
+     <script>
+     // Redirection vers la page de détail au clic sur une carte produit
+     document.querySelectorAll('.product').forEach(function(card) {
+         card.addEventListener('click', function(e) {
+             // Évite le clic sur le bouton panier
+             if(e.target.closest('button')) return;
+             const id = card.getAttribute('data-id');
+             window.location.href = `product-detail.html?id=${id}`;
+         });
+     });
+     </script>
 </body>
 
 </html>
