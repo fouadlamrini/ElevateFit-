@@ -1,4 +1,3 @@
-
 // Tableau des produits (à adapter selon tes vrais produits)
 const products = [
   {
@@ -190,3 +189,20 @@ function displayProductDetail() {
 if (document.querySelector('.main-image')) {
   displayProductDetail();
 }
+
+// Responsive menu bar for header (affichage/masquage menu sur mobile)
+document.addEventListener('DOMContentLoaded', function() {
+  var show_bar = document.getElementById("show_bar");
+  if (show_bar) {
+    show_bar.addEventListener("click", function() {
+      var bar_column = document.getElementById("bar_column");
+      if (bar_column) {
+        if (bar_column.style.display === "none" || bar_column.style.display === "") {
+          bar_column.style.display = "block";
+        } else {
+          bar_column.style.display = "none";
+        }
+      }
+    });
+  }
+});
