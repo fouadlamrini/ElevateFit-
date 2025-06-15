@@ -206,3 +206,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Gestion du panier ElevateFit
+function getCart() {
+    return JSON.parse(localStorage.getItem('cart') || '[]');
+}
+function saveCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+function updateCartTotal() {
+    const cart = getCart();
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const cartTotal = document.getElementById('cart-total');
+    if(cartTotal) cartTotal.textContent = `$${total.toFixed(2)}`;
+}
+// Gestion du bouton Add to Cart sur la page détail
+const addToCartBtn = document.querySelector('.details button');
+if(addToCartBtn) {
+  addToCartBtn.addEventListener('click', function() {
+    const id = getProductIdFromUrl();
+    const product = products.find(p => p.id === id);
+    if(!product) return;
+    let cart = getCart();
+    const found = cart.find(item => item.id === id);
+    if(found) {
+      found.quantity += 1;
+    } else {
+      cart.push({id: product.id, name: product.name, price: product.price, image: product.images[0], quantity: 1});
+    }
+    saveCart(cart);
+    updateCartTotal();
+    addToCartBtn.textContent = 'Added!';
+    setTimeout(()=>{addToCartBtn.textContent = 'Add to Cart';}, 1000);
+  });
+}
+// Mise à jour du total au chargement
+updateCartTotal();
