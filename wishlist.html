@@ -1,33 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>elevateFit</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!---- icon cdn link---->
+  </head>
 
+  <body>
+    <!--making header-->
+    <header>
+      <nav id="nav">
 
+        <img src="images/logo-white.png" class="logo">
 
+        <ul class="menu-bar-side none " id="navBare">
+            <li><a href="index.html" style=" all: unset;">Home</a></li>
+            <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+            <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
+            <li><a href="#" style=" all: unset;">about</a></li>
+            <li><a href="#" style=" all: unset;">contact us</a></li>
+        </ul>
 
+        <ul class="menu-bar">
 
-  
+            <li id="total_in_header">&#36;0.00</li>
+            <li><a href="cart.html" style="color: white;"><i class='fas fa-shopping-cart'></i></a></i></li>
 
-  <label for="priceRange">Filter by Price:</label>
-  <input type="range" id="priceRange" min="0" max="300" value="300"/>
-  <span id="priceValue">$300</span>
+        </ul>
 
-  <div class="row" id="product-container">
-    <!-- Exemple produit -->
-    <div class="col-4 product" data-category="t_shirt" data-price="60">
-      <img src="images/product-1.jpg" alt="Product 1">
-      <h4>Red Printed T-shirt</h4>
-      <p>$60</p>
-      <button class="panier" data-price="60">Add to Cart</button>
+        <i id="btn-header" class="fa fa-bars"></i>
+      </nav>
+    </header>
+
+    <!----------Products------------>
+    <h2 class="title">Wishlist</h2>
+    <div class="small-container cart-page">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="body_of_table">
+              <!-- wishlist products will appear here -->
+          </tbody>
+        </table>
+
+        
+    </div>
+    <!-------footer------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and Ios mobile phone.</p>
+
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" />
+            <p>
+              Our purpose is To Sustainably Make the Pleasure and Benefits of
+              Sports Accessible to the Many.
+            </p>
+          </div>
+
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+        <a href="" class="copyright"
+          >Copyright 2024 - Made with ❤️ LorenzCipher</a
+        >
+      </div>
     </div>
 
-    <!-- Répète les autres produits ici بنفس الشكل -->
-  </div>
-</div>
+     <!-----------------JS----------------------->
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 ElevateFit. All Rights Reserved.</p>
-  </div>
-</footer>
+     <script src="js/script.js"></script>
+     <script src="js/cart.js"></script>
+     <script src="js/wishlist.js"></script>
 
-<script src="js/app.js"></script>
-</body>
+  </body>
 </html>
