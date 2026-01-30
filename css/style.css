@@ -631,7 +631,7 @@ form a {
   color: #ffff !important;
 }
 /* show button when hover product */
-.items_section .col-4:hover .add_to_cart_button {
+.col-4:hover .add_to_cart_button {
   visibility: visible;
 }
 

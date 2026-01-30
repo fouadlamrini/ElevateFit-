@@ -68,7 +68,7 @@
                     <input type="range" min="0" max="500" value="250" id="slider" oninput="filterByPrice()" />
                 </div>
                 <!-- select by  by category -->
-             <select onchange="filterByCategory(this.value)">
+             <select >
                 <option value="">Default Category</option>
                 <option value="women">Women</option>
                 <option value="men">Men</option>
@@ -91,7 +91,7 @@
             
             <!-- row1 -->
             <!-- item1 -->
-            <div data-category="men" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="1">
+            <div data-category="men" data-price="50" class="col-4 product_item"  data-id="1">
                 <img src="images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -102,14 +102,14 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,1)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,1)" data-id="1">Add To Cart</button>
+                <button class="add_to_cart_button"  data-id="1">Add To Cart</button>
             </div>
             <!-- item2 -->
-            <div data-category="men footwear" data-price="100" class="col-4 product_item" onclick="productDetails(event,2)" data-id="2">
+            <div data-category="men footwear" data-price="100" class="col-4 product_item"  data-id="2">
                 <img src="images/product-2.jpg">
                 <h4>Black Sneakers</h4>
                 <div class="rating">
@@ -120,14 +120,14 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$100.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,2)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,2)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
             <!-- item3 -->
-            <div data-category="men" data-price="150" class="col-4 product_item" onclick="productDetails(event)" data-id="3">
+            <div data-category="men" data-price="150" class="col-4 product_item"  data-id="3">
                 <img src="images/product-3.jpg">
                 <h4>Gray Athletic Pants</h4>
                 <div class="rating">
@@ -138,15 +138,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$150.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,3)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,3)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
             <!-- item 4 -->
-            <div data-category="men" data-price="100" class="col-4 product_item" onclick="productDetails(event)" data-id="4">
+            <div data-category="men" data-price="100" class="col-4 product_item"  data-id="4">
                 <img src="images/product-4.jpg">
                 <h4>Black Printed T-shirt</h4>
                 <div class="rating">
@@ -158,16 +158,16 @@
 
                 </div>
                 <p>$100.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,4)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,4)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
             <!-- row 2 -->
              <!-- item5 -->
-            <div data-category="footwear" data-price="200" class="col-4 product_item" onclick="productDetails(event)" data-id="5">
+            <div data-category="footwear" data-price="200" class="col-4 product_item"  data-id="5">
                 <img src="images/product-5.jpg">
                 <h4>Gray sneakers</h4>
                 <div class="rating">
@@ -178,15 +178,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,5)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,5)">Add To Cart</button>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
              <!-- item6 -->
-            <div data-category="Men" data-price="250" class="col-4 product_item" onclick="productDetails(event)" data-id="">
+            <div data-category="Men" data-price="250" class="col-4 product_item"  data-id="">
                 <img src="images/product-6.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -197,15 +197,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$250.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,6)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,6)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
              <!-- item7 -->
-            <div data-category="footwear" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="7">
+            <div data-category="footwear" data-price="50" class="col-4 product_item"  data-id="7">
                 <img src="images/product-7.jpg">
                 <h4>Classic Trio Sock Pack</h4>
                 <div class="rating">
@@ -216,15 +216,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,7)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,7)">Add To Cart</button>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
              <!-- item8 -->
-            <div data-category="men accessories" data-price="150" class="col-4 product_item" onclick="productDetails(event)" data-id="8">
+            <div data-category="men accessories" data-price="150" class="col-4 product_item"  data-id="8">
                 <img src="images/product-8.jpg">
                 <h4>Minimalist Black Watch</h4>
                 <div class="rating">
@@ -236,16 +236,16 @@
 
                 </div>
                 <p>$150.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,8)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,8)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
             <!-- row3 -->
              <!-- itme9 -->
-            <div data-category="men accessories" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="9">
+            <div data-category="men accessories" data-price="50" class="col-4 product_item"  data-id="9">
                 <img src="images/product-9.jpg">
                 <h4>Classic Black Watch</h4>
                 <div class="rating">
@@ -256,15 +256,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,9)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,9)">Add To Cart</button>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
              <!-- itme10 -->
-            <div data-category="men foootwear" data-price="200" class="col-4 product_item" onclick="productDetails(event)" data-id="10">
+            <div data-category="men foootwear" data-price="200" class="col-4 product_item" data-id="10">
                 <img src="images/product-10.jpg">
                 <h4>Striking Red & Black Sneaker</h4>
                 <div class="rating">
@@ -275,15 +275,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,10)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,10)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
              <!-- itme11 -->
-            <div data-category="men foootwear" data-price="100" class="col-4 product_item" onclick="productDetails(event)" data-id="11">
+            <div data-category="men foootwear" data-price="100" class="col-4 product_item"  data-id="11">
                 <img src="images/product-11.jpg">
                 <h4>Essential Gray Athletic Sneakers</h4>
                 <div class="rating">
@@ -294,15 +294,15 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$100.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,11)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,11)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
 
              <!-- itme12 -->
-            <div data-category="men" data-price="250" class="col-4 product_item" onclick="productDetails(event)" data-id="12">
+            <div data-category="men" data-price="250" class="col-4 product_item"  data-id="12">
                 <img src="images/product-12.jpg">
                 <h4>Black Qthletic Pants</h4>
                 <div class="rating">
@@ -314,11 +314,11 @@
 
                 </div>
                 <p>$250.00</p>
-                <button onclick="event.stopPropagation(); addToWishList(event,12)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                <button  style="border: none;background-color: white; width: 30px; padding: 4px;">
                     <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
                     </svg>
                 </button>
-                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,12)">Add To Cart</button>
+                <button class="add_to_cart_button" >Add To Cart</button>
             </div>
         </div>
         <!-- items end -->
