@@ -26,6 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="css/pages.css" />
     <!---- icon cdn link---->
   </head>
 
@@ -57,22 +58,54 @@
     </header>
     <section class="contact">
         <h1>Contact nous</h1>
+        <div class="contact-grid">
+        <div class="details">
+            <h2>Coordonnées</h2>
+            <ul class="info-list">
+                <li><i class="fa fa-map-marker"></i> 123 Avenue Hassan II, Casablanca</li>
+                <li><i class="fa fa-phone"></i> +212 6 12 34 56 78</li>
+                <li><i class="fa fa-envelope"></i> support@elevatefit.ma</li>
+                <li><i class="fa fa-clock-o"></i> Lun - Ven: 9:00 - 18:00</li>
+            </ul>
+            <div class="map-placeholder">
+                <img src="images/gallery-4.jpg" alt="Notre localisation" />
+            </div>
+        </div>
         <form>
 
             <div class="group">
                 <p>Nom</p>
-                <input class="g1" type="text" required>
+                <input class="g1" type="text" placeholder="Entrez votre nom" required>
             </div>
             <div class="group">
-                <p>Prenom</p>
-                <input class="g1" type="text" required>
+                <p>Prénom</p>
+                <input class="g1" type="text" placeholder="Entrez votre prénom" required>
             </div>
             <div class="group">
                 <p>Email</p>
-                <input class="g1" type="email" required>
+                <input class="g1" type="email" placeholder="exemple@mail.com" required>
+            </div>
+            <div class="group">
+                <p>Téléphone</p>
+                <input class="g1" type="tel" placeholder="06 12 34 56 78">
+            </div>
+            <div class="group">
+                <p>Sujet</p>
+                <select class="g1" required>
+                    <option value="" disabled selected>Choisissez un sujet</option>
+                    <option value="commande">Problème de commande</option>
+                    <option value="produit">Information produit</option>
+                    <option value="retour">Retour / Échange</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+            <div class="group">
+                <p>Message</p>
+                <textarea class="g1" rows="5" placeholder="Écrivez votre message..."></textarea>
             </div>
             <input class="button" type="submit" value="Envoyer">
         </form>
+        </div>
     </section>
 
 
