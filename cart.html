@@ -1,160 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>elevateFit</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/detail.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!---- icon cdn link---->
-    <link rel="stylesheet" href="css/style3.css">
+  </head>
 
-
-</head>
-
-<body>
-
-
-
+  <body>
     <!--making header-->
     <header>
+      <nav id="nav">
 
-        <nav id="nav">
+        <img src="images/logo-white.png" class="logo">
 
-            <img src="images/logo-white.png" class="logo">
+        <ul class="menu-bar-side none " id="navBare">
+            <li><a href="index.html" style=" all: unset;">Home</a></li>
+            <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+            <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
+            <li><a href="#" style=" all: unset;">about</a></li>
+            <li><a href="#" style=" all: unset;">contact us</a></li>
+        </ul>
 
-            <ul class="menu-bar-side">
-                <li><a href="index.html" style=" all: unset;">Home</a></li>
-                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                <li><a href="about.html" style=" all: unset;">about</a></li>
-                <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                
-                <li>&#36;0.00</li>
-                <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
-            </ul>
+        <ul class="menu-bar">
 
-         
-            <div id="show_bar" >
-                <i class="fa fa-bars " id="btn-nav"></i>
-            </div>
-        </nav>
-        <div class="bar-color">
-            <div class="bar_column"  id="bar_column" style="display: none;">
-                <ul class="menu-bar-side menu-bar">
-                    <li><a href="index.html" style=" all: unset;">Home</a></li>
-                    <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                    <li><a href="about.html" style=" all: unset;">about</a></li>
-                    <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                </ul>
-            </div>
-        </div>
+            <li id="total_in_header">&#36;0.00</li>
+            <li><a href="cart.html" style="color: white;"><i class='fas fa-shopping-cart'></i></a></i></li>
 
+        </ul>
 
-        
-        
+        <i id="btn-header" class="fa fa-bars"></i>
+    </nav>
 
     </header>
 
-    <section>
-        <div class="top_bar">
-            <p>Product</p>
-            <p>Quantite</p>
-            <p>Subtotal</p>
+    <!----------Products------------>
+    <div class="small-container cart-page">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="body_of_table">
+                <!-- cart products will appear here -->
+            </tbody>
+        </table>
 
-        </div>
-        <div class="card_shop">
-            
-        <div class="product">
-            <img src="images/buy-1.jpg" alt="">
-            <div class="detail_product">
-                <h4>Red Printed T-shirt</h4>
-                <p>price $21.00</p>
-                <p class="Remove">Remove</p>
-            </div>
-            <div class="prix_contitu">
-                <input type="number" class="number">
-                <p> $21.00</p>
-            </div>
+        <!-- Total infos -->
+        <div class="total-price">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Subtotal
+                        </td>
+                        <td>$ <span id="totaleWithoutTva"></span></td>
+                    </tr>
 
+                    <tr>
+                        <td>
+                            Tax (0%)
+                        </td>
+                        <td>$ 0.00 <span class="Tva"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Total
+                        </td>
+                        <td>$ <span id="totaleWithTva"></span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-           
-            <div class="prix_total">
-                <p>Subtotal  $21.00</p>
-                <p>Tax  $30.00</p>
-                <p>Total  $51.00</p>
-                
-            
+        <div class="checkout">
+        <a class="chekout_button" href="checkout.html" style="color: black;">Add To Cart</a>
         </div>
-        <a href="paiement.html"><button class="buy">buy now</button></a>
     </div>
-    </section>
 
+    <!-------footer------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and Ios mobile phone.</p>
 
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-
-
-                    <div class="footer-col-1">
-                        <h3>Download Our App</h3>
-                        <p>Download App for Android and Ios mobile phone.</p>
-
-
-                        <div class="app-logo">
-                            <img src="images/play-store.png">
-                            <img src="images/app-store.png">
-                        </div>
-
-                    </div>
-
-                    <div class="footer-col-2">
-                        <img src="images/logo-white.png">
-                        <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the
-                            Many.
-                        </p>
-                    </div>
-
-                    <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-col-4">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <hr>
-                <a href="" class="copyright">Copyright 2024 - Made with ❤️ LorenzCipher</a>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
             </div>
+          </div>
+
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" />
+            <p>
+              Our purpose is To Sustainably Make the Pleasure and Benefits of
+              Sports Accessible to the Many.
+            </p>
+          </div>
+
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
         </div>
 
-    </footer>
+        <hr />
+        <a href="" class="copyright"
+          >Copyright 2024 - Made with ❤️ LorenzCipher</a
+        >
+      </div>
+    </div>
 
-    <!-----------------JS----------------------->
-    <script src="js/panier.js"></script>
-</body>
+     <!-----------------JS----------------------->
 
+     <script src="js/script.js"></script>
+     <script src="js/cart.js"></script>
+  </body>
 </html>
