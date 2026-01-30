@@ -776,3 +776,10 @@ input[type="range"] {
 #Layer_1 .cls-1:hover{
   fill: #ff523b;
 }
+
+/* heart active visual */
+button.wish-active svg #Layer_1 .cls-1,
+button.wish-active #Layer_1 .cls-1 {
+  fill: #ff523b !important;
+  stroke: #ff523b !important;
+}
