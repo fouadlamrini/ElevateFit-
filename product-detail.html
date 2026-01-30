@@ -1,77 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Product Detail</title>
-  <link rel="stylesheet" href="css/style2.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+<html lang = "en">
 
-    <!--making header identique à Products.html-->
-    <header>
-        <nav id="nav">
-            <img src="images/logo-white.png" class="logo">
-            <ul class="menu-bar-side">
-                <li><a href="index.html" style=" all: unset;">Home</a></li>
-                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                <li><a href="about.html" style=" all: unset;">about</a></li>
-                <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                <li id="cart-total">&#36;0.00</li>
-                <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
-            </ul>
-            <div id="show_bar" >
-                <i class="fa fa-bars " id="btn-nav"></i>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>elevateFit</title>
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/detail.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!---- icon cdn link---->
+
+
+    </head>
+
+    <body>
+
+       
+        
+            <!--making header-->
+            <header>
+                <nav id="nav">
+
+                    <img src="images/logo-white.png" class="logo">
+        
+                    <ul class="menu-bar-side none " id="navBare">
+                        <li><a href="index.html" style=" all: unset;">Home</a></li>
+                        <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                        <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
+                        <li><a href="#" style=" all: unset;">about</a></li>
+                        <li><a href="#" style=" all: unset;">contact us</a></li>
+                    </ul>
+        
+                    <ul class="menu-bar">
+        
+                        <li id="total_in_header">&#36;0.00</li>
+                        <li><a href="cart.html" style="color: white;"><i class='fas fa-shopping-cart'></i></a></i></li>
+        
+                    </ul>
+        
+                    <i id="btn-header" class="fa fa-bars"></i>
+                </nav>
+        
+          </header>
+
+    <!------------Single Products Detail-------------->
+   
+
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                     <img src="images/gallery-1.jpg" width="100%" id="product-img">
+                </div>
+
+            <!--column related to the text of single product-->
+                <div class="col-2">
+                    <p>Home/ T-Shirt</p>
+                    <h1 id="detailed_prodect_title">Red Printed T-Shirt by HRX</h1>
+                    <h4>$<span id="detailed_prodect_price">50.00</span></h4>
+
+                    <!--sizes selection-->
+                    <select>
+                        <option>Select Size</option>
+                        <option>XXL</option>
+                        <option>XL</option>
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>>Small</option>
+                    </select>
+                    
+                    <!--no of products-->
+                    <div style="display: flex;align-items: center; justify-content: space-between;">
+                        <input id="product_quantity" type="number" value="1">
+                        <button class="btn" id="add_to_cart_button" onclick="addToCart(event,1)">Add To Cart</button><!--add to cart button-->
+                        <button onclick="event.stopPropagation(); addToWishList(event,1)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                            <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3>Product Details <i class="fa fa-indent" aria-hidden="true"></i></h3>
+                    <br>
+                    <p>Give Your summer wardrobe a style upgrade with the HTX Men's 
+                    Active T-shirt. Team it with a pair of shorts for your morning
+                    Workout or a denims for an evening out with the guys.
+                    </p>
+                </div>
             </div>
-        </nav>
-        <div class="bar-color">
-            <div class="bar_column"  id="bar_column" style="display: none;">
-                <ul class="menu-bar-side menu-bar">
-                    <li><a href="index.html" style=" all: unset;">Home</a></li>
-                    <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                    <li><a href="about.html" style=" all: unset;">about</a></li>
-                    <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                </ul>
-            </div>
+            <div class="small-img-row">
+                         
+                <div class="small-img-col">
+                     <img src="images/gallery-1.jpg" width="100%" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="images/gallery-2.jpg" width="100%" class="small-img">
+                </div>
+                
+                <div class="small-img-col">
+                    <img src="images/gallery-3.jpg" width="100%" class="small-img">
+                </div>
+                
+                <div class="small-img-col">
+                    <img src="images/gallery-4.jpg" width="100%" class="small-img">
+                </div>
+
+             </div>
         </div>
-    </header>
+        
 
-  <div class="container">
-    <div class="images">
-      <img class="main-image" src="Images/product-12.jpg" alt="Main Product Image">
-      <div class="thumbnails">
-        <img src="Images/product-12.jpg" alt="Thumb 1">
-        <img src="Images/product-11.jpg" alt="Thumb 2">
-        <img src="Images/product-10.jpg" alt="Thumb 3">
-        <img src="Images/product-9.jpg" alt="Thumb 4">
-      </div>
+    <!----------title-------------->
+    <div class="small container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
     </div>
-    <div class="details">
-      <h2>Red Printed T-shirt</h2>
-      <p class="price">$21.00</p>
-      <p>
-        This red printed T-shirt is made from high-quality cotton. It's comfortable, durable, and stylish.
-        Perfect for casual wear.
-      </p>
-      <button>Add to Cart</button>
-    </div>
-  </div>
 
-  <!-- Footer identique à Products.html -->
-  <div class="footer">
+
+    <!----------Products------------>
+    <div class="small container">
+
+    
+       <div class="row">
+           <div class="col-4">
+               <img src="images/product-9.jpg">
+               <h4>Red Printed T-shirt</h4>
+               <div class="rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+               </div>
+               <p>$50.00</p>
+           </div>
+
+           <div class="col-4">
+              <img src="images/product-10.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <p>$50.00</p>
+          </div>
+
+          <div class="col-4">
+              <img src="images/product-11.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                 <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <p>$50.00</p>
+          </div>
+
+          <div class="col-4">
+              <img src="images/product-12.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+              </div>
+              <p>$50.00</p>
+          </div>
+       </div>
+       
+`      
+    </div>
+ 
+    <!-------footer------->
+    <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="footer-col-1"></div>
-                <div class="footer-col-2"></div>
-                <div class="footer-col-3"></div>
-                <div class="footer-col-4"></div>
-            </div>
-            <hr>
-            <a href="" class="copyright">Copyright 2024 - Made with ❤️ LorenzCipher</a>
-        </div>
-    </div>
+                
+          
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+                   
+                 
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>   
+                
+                </div>
 
-<script src="js/product_detail.js"></script>
-</body>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    
+                </div>
+            </div>
+    
+            <hr>
+            <a href="" class="copyright">Copyright 2024   - Made with ❤️ LorenzCipher</a>
+        </div>
+    </div>         
+
+    <!-----------------JS----------------------->
+
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/script.js"></script>
+    
+    </body>
+
 </html>
