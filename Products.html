@@ -7,7 +7,6 @@
     <title>elevateFit</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/detail.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,60 +30,69 @@
 
             <img src="images/logo-white.png" class="logo">
 
-            <ul class="menu-bar-side">
+            <ul class="menu-bar-side none " id="navBare">
                 <li><a href="index.html" style=" all: unset;">Home</a></li>
                 <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                <li><a href="about.html" style=" all: unset;">about</a></li>
-                <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                <li id="cart-total">&#36;0.00</li>
-                <li><a href="panier.html"><i class='fas fa-shopping-cart'></i></a></li>
+                <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
+                <li><a href="#" style=" all: unset;">about</a></li>
+                <li><a href="#" style=" all: unset;">contact us</a></li>
             </ul>
 
-            <div id="show_bar" >
-                <i class="fa fa-bars " id="btn-nav"></i>
-            </div>
+            <ul class="menu-bar">
+
+                <li id="total_in_header">&#36;0.00</li>
+                <li><a href="cart.html" style="color: white;"><i class='fas fa-shopping-cart'></i></a></i></li>
+
+            </ul>
+
+            <i id="btn-header" class="fa fa-bars"></i>
         </nav>
-        <div class="bar-color">
-            <div class="bar_column"  id="bar_column" style="display: none;">
-                <ul class="menu-bar-side menu-bar">
-                    <li><a href="index.html" style=" all: unset;">Home</a></li>
-                    <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                    <li><a href="about.html" style=" all: unset;">about</a></li>
-                    <li><a href="contact.html" style=" all: unset;">contact us</a></li>
-                </ul>
-            </div>
-        </div>
-        
 
     </header>
-
-
     <!--Featured Products-->
 
 
     <div class="small container">
 
-        <div class="filter-section">
-            <input type="text" id="searchInput" placeholder="Search products..." style="padding: 8px; margin-right: 20px;">
-            <select id="product-filter">
-                <option value="all">All Categories</option>
-                <option value="t_shirt">T-Shirts</option>
-                <option value="trousers">Trousers</option>
-                <option value="shoes">Shoes</option>
-                <option value="watch">Watches</option>
-                <option value="socks">Socks</option>
+
+        <div class="row row-2">
+            <h2>All Products
+
+            </h2>
+            <!-- sorting and filtering -->
+            <div class="sort_filter">
+                <!-- filter by price -->
+                 <div class="price_filter" >
+                    <span>Price Range:</span>
+                    <span id="range_value"></span>
+                    <input type="range" min="0" max="500" value="250" id="slider" oninput="filterByPrice()" />
+                </div>
+                <!-- select by  by category -->
+             <select onchange="filterByCategory(this.value)">
+                <option value="">Default Category</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="kids">Kids</option>
+                <option value="footwear">Footwear</option>
+                <option value="accessories">Accessories</option>
             </select>
-            <label for="priceRange">Max Price: $<span id="priceValue">300</span></label>
-            <input type="range" id="priceRange" min="0" max="300" value="300">
+            <!-- sorting -->
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by Price</option>
+                <option>Sort by Popularity</option>
+                <option>Sort by Sale</option>
+            </select>
+            </div>
         </div>
 
-
-      
-        <div class="row">
-
-
-            <div class="col-4 product" data-id="1" data-price="63" data-category="t_shirt">
-                <img src="Images/product-1.jpg">
+        <!-- items start -->
+        <div class="items_section">
+            
+            <!-- row1 -->
+            <!-- item1 -->
+            <div data-category="men" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="1">
+                <img src="images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -93,12 +101,93 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$63.00</p>
-                <button class="panier" data-price="63"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                <p>$50.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,1)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,1)" data-id="1">Add To Cart</button>
+            </div>
+            <!-- item2 -->
+            <div data-category="men footwear" data-price="100" class="col-4 product_item" onclick="productDetails(event,2)" data-id="2">
+                <img src="images/product-2.jpg">
+                <h4>Black Sneakers</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,2)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,2)">Add To Cart</button>
+            </div>
+            <!-- item3 -->
+            <div data-category="men" data-price="150" class="col-4 product_item" onclick="productDetails(event)" data-id="3">
+                <img src="images/product-3.jpg">
+                <h4>Gray Athletic Pants</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$150.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,3)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,3)">Add To Cart</button>
             </div>
 
-            <div class="col-4 product" data-id="2" data-price="72" data-category="shoes">
-                <img src="Images/product-2.jpg">
+            <!-- item 4 -->
+            <div data-category="men" data-price="100" class="col-4 product_item" onclick="productDetails(event)" data-id="4">
+                <img src="images/product-4.jpg">
+                <h4>Black Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                </div>
+                <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,4)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,4)">Add To Cart</button>
+            </div>
+
+            <!-- row 2 -->
+             <!-- item5 -->
+            <div data-category="footwear" data-price="200" class="col-4 product_item" onclick="productDetails(event)" data-id="5">
+                <img src="images/product-5.jpg">
+                <h4>Gray sneakers</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$200.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,5)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,5)">Add To Cart</button>
+            </div>
+
+             <!-- item6 -->
+            <div data-category="Men" data-price="250" class="col-4 product_item" onclick="productDetails(event)" data-id="">
+                <img src="images/product-6.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -107,13 +196,18 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$72.00</p>
-                <button class="panier" data-price="72"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                <p>$250.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,6)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,6)">Add To Cart</button>
             </div>
 
-            <div class="col-4 product" data-id="3" data-price="50" data-category="trousers">
-                <img src="Images/product-3.jpg">
-                <h4>Red Printed T-shirt</h4>
+             <!-- item7 -->
+            <div data-category="footwear" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="7">
+                <img src="images/product-7.jpg">
+                <h4>Classic Trio Sock Pack</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -122,12 +216,17 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button class="panier" data-price="50"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                <button onclick="event.stopPropagation(); addToWishList(event,7)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,7)">Add To Cart</button>
             </div>
 
-            <div class="col-4 product" data-id="4" data-price="99" data-category="t_shirt">
-                <img src="Images/product-4.jpg">
-                <h4>Red Printed T-shirt</h4>
+             <!-- item8 -->
+            <div data-category="men accessories" data-price="150" class="col-4 product_item" onclick="productDetails(event)" data-id="8">
+                <img src="images/product-8.jpg">
+                <h4>Minimalist Black Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -136,132 +235,94 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$99.00</p>
-                <button class="panier" data-price="99"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                <p>$150.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,8)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,8)">Add To Cart</button>
+            </div>
+
+            <!-- row3 -->
+             <!-- itme9 -->
+            <div data-category="men accessories" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="9">
+                <img src="images/product-9.jpg">
+                <h4>Classic Black Watch</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,9)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,9)">Add To Cart</button>
+            </div>
+
+             <!-- itme10 -->
+            <div data-category="men foootwear" data-price="200" class="col-4 product_item" onclick="productDetails(event)" data-id="10">
+                <img src="images/product-10.jpg">
+                <h4>Striking Red & Black Sneaker</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$200.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,10)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,10)">Add To Cart</button>
+            </div>
+
+             <!-- itme11 -->
+            <div data-category="men foootwear" data-price="100" class="col-4 product_item" onclick="productDetails(event)" data-id="11">
+                <img src="images/product-11.jpg">
+                <h4>Essential Gray Athletic Sneakers</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,11)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,11)">Add To Cart</button>
+            </div>
+
+             <!-- itme12 -->
+            <div data-category="men" data-price="250" class="col-4 product_item" onclick="productDetails(event)" data-id="12">
+                <img src="images/product-12.jpg">
+                <h4>Black Qthletic Pants</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                </div>
+                <p>$250.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,12)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
+                <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,12)">Add To Cart</button>
             </div>
         </div>
+        <!-- items end -->
 
-
-
-        <div class="row">
-
-            <div class="col-4 product" data-id="5" data-price="84" data-category="shoes">
-                <img src="Images/product-5.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$84.00</p>
-                <button class="panier" data-price="84"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="6" data-price="75" data-category="t_shirt">
-                <img src="Images/product-6.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$75.00</p>
-                <button class="panier" data-price="75"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="7" data-price="79" data-category="socks">
-                <img src="Images/product-7.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$79.00</p>
-                <button class="panier" data-price="79"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="8" data-price="64" data-category="watch">
-                <img src="Images/product-8.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-
-                </div>
-                <p>$64.00</p>
-                <button class="panier" data-price="64"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 product" data-id="9" data-price="81" data-category="watch">
-                <img src="Images/product-9.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$81.00</p>
-                <button class="panier" data-price="81"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="10" data-price="57" data-category="shoes">
-                <img src="Images/product-10.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$57.00</p>
-                <button class="panier" data-price="57"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="11" data-price="53" data-category="shoes">
-                <img src="Images/product-11.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>$53.00</p>
-                <button class="panier" data-price="53"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-
-            <div class="col-4 product" data-id="12" data-price="21" data-category="trousers">
-                <img src="Images/product-12.jpg">
-                <h4>Red Printed T-shirt</h4>
-                <div class="rating">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-
-                </div>
-                <p>$21.00</p>
-                <button class="panier" data-price="21"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
-            </div>
-        </div>
-
-        `
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
@@ -325,23 +386,11 @@
     </div>
 
     <!-----------------JS----------------------->
-   
-    
-   
-    
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
 
-     <script src="js/products.js" ></script>
-     <script>
-     // Redirection vers la page de détail au clic sur une carte produit
-     document.querySelectorAll('.product').forEach(function(card) {
-         card.addEventListener('click', function(e) {
-             // Évite le clic sur le bouton panier
-             if(e.target.closest('button')) return;
-             const id = card.getAttribute('data-id');
-             window.location.href = `product-detail.html?id=${id}`;
-         });
-     });
-     </script>
+
 </body>
 
 </html>
